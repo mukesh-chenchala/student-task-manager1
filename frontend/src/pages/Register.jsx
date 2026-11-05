@@ -37,7 +37,7 @@ function Register() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://student-task-manager-48bb.onrender.com/api/auth/register",
         {
           fullName: name,
           registrationNumber,
@@ -46,7 +46,7 @@ function Register() {
         }
       );
 
-      setSuccess(response.data.message);
+      setSuccess(response.data.message || "Registration successful!");
 
       setName("");
       setRegistrationNumber("");
@@ -59,6 +59,8 @@ function Register() {
       }, 1500);
 
     } catch (err) {
+      console.error("Registration error:", err);
+
       setError(
         err.response?.data?.message ||
         "Registration failed. Please try again."
