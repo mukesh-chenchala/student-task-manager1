@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 // Task API routes
-app.use("/api/tasks", require("./routes/taskRoutes"));
+app.use("/api/tasks", require("./routes/taskroutes"));
 
 // Authentication API routes
 app.use("/api/auth", require("./routes/authRoutes"));
