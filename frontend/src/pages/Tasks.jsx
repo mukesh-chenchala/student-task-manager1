@@ -4,7 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
-const API = "http://localhost:5000/api/tasks";
+// Deployed backend API URL
+const API = "https://student-task-manager-48bb.onrender.com/api/tasks";
 
 // Get token from localStorage or sessionStorage
 const getToken = () => {
