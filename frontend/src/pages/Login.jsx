@@ -21,7 +21,7 @@ function Login() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://student-task-manager-48bb.onrender.com/api/auth/login",
         {
           registrationNumber,
           password
